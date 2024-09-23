@@ -1,0 +1,207 @@
+:root {
+    --primary-color: rgb(238, 238, 238);
+    --secondary-color: rgb(255, 255, 255);
+    --third-color: rgb(0, 120, 20);
+    --fourth-color: rgb(149, 225, 125);
+    --fifth-color: rgb(103, 175, 98);
+    --link-hover: rgb(0, 255, 191);
+    --submit-color: rgb(0, 208, 35);
+    --reset-color: rgb(255, 0, 11);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-wrap: wrap;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+    background: var(--primary-color);
+    padding-top: 10px;
+}
+
+#container {
+    width: 700px;
+    background: var(--secondary-color);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+#header {
+    width: 100%;
+    height: 134px;
+}
+
+#bd-logo {
+    width: 142px;
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 5px 0 0 5px;
+    border-right: 2px solid var(--secondary-color);
+}
+
+#bd-logo img {
+    width: 82px;
+}
+
+#ministry,
+#board-name,
+#banner_flag {
+    text-align: left;
+    background: var(--third-color);
+    overflow: hidden;
+}
+
+#ministry,
+#board-name,
+#banner_flag {
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+#ministry,
+#board-name {
+    height: 41px;
+}
+
+#ministry {
+    font-size: 17px;
+    padding-inline: 5px 20px;
+    width: 235px;
+    color: var(--fourth-color);
+}
+
+#banner_flag {
+    position: relative;
+    border-top-right-radius: 7px;
+}
+
+#banner_flag img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#board-name {
+    height: 55px;
+    color: var(--secondary-color);
+    font-size: 17px;
+    padding-left: 5px;
+}
+
+#board-link {
+    position: relative;
+    height: 23px;
+    background: url(http://www.educationboardresults.gov.bd/images/bar_bk.jpg);
+    text-align: right;
+}
+
+#board-link a {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: 100;
+
+    &:hover {
+        color: var(--link-hover);
+    }
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-block: 25px 45px;
+}
+
+form fieldset {
+    width: 74%;
+    padding: 30px 50px;
+}
+
+#user-input {
+    width: 100%;
+    height: 350px;
+}
+
+#user-input tr {
+    width: 100%;
+}
+
+#user-input th {
+    text-align: left;
+    font-size: 14px;
+    width: 100px;
+}
+
+#user-input tr td input,
+#user-input tr td select {
+    width: 100%;
+    height: 40px;
+    background: var(--primary-color);
+    border: 1px solid rgb(105 105 105);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.colon {
+    width: 50px;
+    text-align: center;
+}
+
+#btn {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#btn button {
+    padding: 10px 30px;
+    font-size: 15px;
+    border: 2px solid rgb(105 105 105);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn button:first-child {
+    background: var(--submit-color);
+}
+
+#btn button:last-child {
+    background: var(--reset-color);
+    color: var(--secondary-color);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 10px 20px;
+    width: 100%;
+    height: 70px;
+    background: var(--primary-color);
+    border-radius: 0 0 5px 5px;
+    border-top: 5px solid rgba(from var(--third-color) r g b / 0.6);
+}
+
+footer p {
+    font-size: 12px;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 12px;
+}
