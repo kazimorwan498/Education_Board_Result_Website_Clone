@@ -31,14 +31,15 @@
             </tr>
         </table>
 
-        <form action="#">
+        <form action="./result/index.html">
             <fieldset>
                 <table id="user-input">
                     <tr>
                         <th>Examination</th>
                         <td class="colon">:</td>
                         <td>
-                            <select name="exam" id="exam">
+                            <select name="exam" id="exam" required>
+                                <option value="">Select One</option>
                                 <option value="ssc">SSC/Dakhil/Equivalent</option>
                                 <option value="jsc">JSC/JDC</option>
                                 <option value="ssc">SSC/Dakhil</option>
@@ -56,8 +57,8 @@
                         <th>Year</th>
                         <td class="colon">:</td>
                         <td>
-                            <select name="year" id="year">
-                                <option value="0000" selected="">Select One</option>
+                            <select name="year" id="year" required>
+                                <option value="">Select One</option>
                                 <option value="2024">2024</option>
                                 <option value="2023">2023</option>
                                 <option value="2022">2022</option>
@@ -95,8 +96,8 @@
                         <th>Board</th>
                         <td class="colon">:</td>
                         <td>
-                            <select name="board" id="board">
-                                <option value="" selected>Select One</option>
+                            <select name="board" id="board" required>
+                                <option value="">Select One</option>
                                 <option value="barisal">Barisal</option>
                                 <option value="chittagong">Chittagong</option>
                                 <option value="comilla">Comilla</option>
@@ -116,24 +117,24 @@
                     <tr>
                         <th>Roll</th>
                         <td class="colon">:</td>
-                        <td><input type="number" name="roll" id="roll"></td>
+                        <td><input type="number" name="roll" id="roll" oninput="limitLengthRoll(this)" required></td>
                     </tr>
 
                     <tr>
                         <th>Reg: No</th>
                         <td class="colon">:</td>
-                        <td><input type="number" name="reg-no" id="reg-no"></td>
+                        <td><input type="number" name="reg" id="reg" oninput="limitLengthRegNo(this)" required></td>
                     </tr>
 
                     <tr>
                         <th>10 + 2</th>
                         <td class="colon">=</td>
-                        <td><input type="number" name="calculation" id="calculation"></td>
+                        <td><input type="number" name="calculation" id="calculation" required></td>
                     </tr>
                 </table>
                 <div id="btn">
-                    <button type="submit">Submit</button>
                     <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
                 </div>
             </fieldset>
         </form>
@@ -146,6 +147,20 @@
             </div>
         </footer>
     </div>
+
+
+    <script>
+        function limitLengthRoll(element) {
+            if (element.value.length > 6) {
+                element.value = element.value.slice(0, 6);
+            }
+        }
+        function limitLengthRegNo(element) {
+            if (element.value.length > 10) {
+                element.value = element.value.slice(0, 10);
+            }
+        }
+    </script>
 
 </body>
 

@@ -121,71 +121,86 @@ body {
     }
 }
 
-form {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-block: 25px 45px;
-}
-
-form fieldset {
-    width: 74%;
-    padding: 30px 50px;
-}
-
-#user-input {
-    width: 100%;
-    height: 350px;
-}
-
-#user-input tr {
-    width: 100%;
-}
-
-#user-input th {
-    text-align: left;
-    font-size: 14px;
-    width: 100px;
-}
-
-#user-input tr td input,
-#user-input tr td select {
-    width: 100%;
-    height: 40px;
-    background: var(--primary-color);
-    border: 1px solid rgb(105 105 105);
-    border-radius: 5px;
-    font-size: 14px;
-    padding-inline: 5px;
-}
-
-.colon {
-    width: 50px;
+h1,
+h2 {
+    font-size: 20px;
     text-align: center;
+    margin-block: 20px;
 }
 
-#btn {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-top: 10px;
+#student-details,
+#grade-sheet {
+    width: 100%;
+    border-radius: 3px;
 }
 
-#btn button {
-    padding: 10px 30px;
+#student-details td {
+    background: var(--primary-color);
     font-size: 15px;
-    border: 2px solid rgb(105 105 105);
-    border-radius: 5px;
-    cursor: pointer;
+    height: 100%;
+    padding-inline: 6px;
 }
 
-#btn button:first-child {
-    background: var(--reset-color);
-    color: var(--secondary-color);
+#student-details td:first-child {
+    width: 80px;
 }
 
-#btn button:last-child {
-    background: var(--submit-color);
+#student-details,
+#grade-sheet {
+    text-align: left;
+}
+
+#student-details tr,
+#grade-sheet tr {
+    height: 30px;
+}
+
+.result {
+    font-weight: bold;
+}
+
+#grade-sheet th {
+    background: rgb(175, 183, 190);
+}
+
+#grade-sheet tr:nth-child(even) td {
+    background: var(--primary-color);
+}
+
+#grade-sheet tr:nth-child(odd) td {
+    background: rgb(222, 225, 228);
+}
+
+#grade-sheet tr th:first-child,
+#grade-sheet tr td:first-child,
+#grade-sheet tr th:last-child,
+#grade-sheet tr td:last-child {
+    width: 120px;
+}
+
+#grade-sheet tr th:first-child,
+#grade-sheet tr td:first-child,
+#grade-sheet tr th:nth-child(2),
+#grade-sheet tr td:nth-child(2),
+#grade-sheet tr th:last-child,
+#grade-sheet tr td:last-child {
+    padding-inline: 10px;
+}
+
+#search-again {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-block: 20px;
+}
+
+#search-again a {
+    color: rgb(0 0 255);
+    text-decoration: none;
+}
+
+#search-again a:hover {
+    color: rgb(255, 0, 0);
 }
 
 footer {
