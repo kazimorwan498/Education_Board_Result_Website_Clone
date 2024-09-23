@@ -102,8 +102,8 @@ body {
 
 #board-link {
     position: relative;
-    height: 23px;
-    background: url(http://www.educationboardresults.gov.bd/images/bar_bk.jpg);
+    height: 25px;
+    background: url(../img/bar_bk.jpg);
     text-align: right;
 }
 
